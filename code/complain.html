@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>物业管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" A management system.">
+    <meta name="author" content="DXL WXY">
+
+    <!-- The styles -->
+    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+
+    <link href="css/charisma-app.css" rel="stylesheet">
+    <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
+    <link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
+    <link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
+    <link href='bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
+    <link href='bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
+    <link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='css/jquery.noty.css' rel='stylesheet'>
+    <link href='css/noty_theme_default.css' rel='stylesheet'>
+    <link href='css/elfinder.min.css' rel='stylesheet'>
+    <link href='css/elfinder.theme.css' rel='stylesheet'>
+    <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='css/uploadify.css' rel='stylesheet'>
+    <link href='css/animate.min.css' rel='stylesheet'>
+
+    <!-- jQuery -->
+    <script src="bower_components/jquery/jquery.min.js"></script>
+
+    <script src="js/complain.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default" role="navigation">
+
+    <div class="navbar-inner">
+        <a class="navbar-brand"> <img alt="Charisma Logo" src="img/logo20.png" class="hidden-xs"/>
+            <span>喵崽物业管理</span></a>
+
+        <a class="navbar-brand"><span>Management</span></a>
+        <a class="navbar-brand"><span>System</span></a>
+
+        <!-- theme selector starts -->
+        <div class="btn-group pull-right theme-container animated tada">
+            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <i class="glyphicon glyphicon-tint"></i><span
+                    class="hidden-sm hidden-xs"> Change Theme / Skin</span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="themes">
+                <li><a data-value="classic" href="#"><i class="whitespace"></i> Classic</a></li>
+                <li><a data-value="cerulean" href="#"><i class="whitespace"></i> Cerulean</a></li>
+                <li><a data-value="cyborg" href="#"><i class="whitespace"></i> Cyborg</a></li>
+                <li><a data-value="simplex" href="#"><i class="whitespace"></i> Simplex</a></li>
+                <li><a data-value="darkly" href="#"><i class="whitespace"></i> Darkly</a></li>
+                <li><a data-value="lumen" href="#"><i class="whitespace"></i> Lumen</a></li>
+                <li><a data-value="slate" href="#"><i class="whitespace"></i> Slate</a></li>
+                <li><a data-value="spacelab" href="#"><i class="whitespace"></i> Spacelab</a></li>
+                <li><a data-value="united" href="#"><i class="whitespace"></i> United</a></li>
+            </ul>
+        </div>
+        <!-- theme selector ends -->
+
+    </div>
+</div>
+
+<div class="ch-container">
+    <div class="row">
+
+        <!-- left menu starts -->
+        <div class="col-sm-2 col-lg-2">
+            <div class="sidebar-nav">
+                <div class="nav-canvas">
+                    <div class="nav-sm nav nav-stacked">
+
+                    </div>
+                    <ul class="nav nav-pills nav-stacked main-menu">
+                        <li class="nav-header">房屋管理</li>
+                        <li><a class="ajax-link" href="room.html"><span> 房屋信息</span></a></li>
+                        <li><a class="ajax-link" href="check_in.html"><span> 入住信息</span></a></li>
+
+                        <li class="nav-header">人员管理</li>
+                        <li><a class="ajax-link" href="resident.html"><span> 住户信息</span></a></li>
+                        <li><a class="ajax-link" href="staff.html"><span> 工作人员信息</span></a></li>
+
+                        <li class="nav-header"> 设备管理</li>
+                        <li><a class="ajax-link" href="basement.html"><span> 基本设施信息</span></a></li>
+                        <li><a class="ajax-link" href="check.html"><span> 排查信息</span></a></li>
+                        <li><a class="ajax-link" href="request.html"><span> 报修记录</span></a></li>
+                        <li><a class="ajax-link" href="repair.html"><span> 维修记录</span></a></li>
+                        <li><a class="ajax-link" href="analyse.html"><span> 月度季度汇总</span></a></li>
+
+                        <li class="nav-header"> 投诉管理</li>
+                        <li><a class="ajax-link" href="complain.html"><span> 投诉记录</span></a></li>
+
+                        <li class="nav-header"> 停车管理</li>
+                        <li><a class="ajax-link" href="parking.html"><span> 车位信息</span></a></li>
+                        <li><a class="ajax-link" href="rent.html"><span> 租用/购买记录</span></a></li>
+                        <li><a class="ajax-link" href="temp_parking.html"><span> 临停车位信息</span></a></li>
+
+                        <li class="nav-header"> 费用管理</li>
+                        <li><a class="ajax-link" href="bill.html"><span> 住户月账单管理</span></a></li>
+                        <li><a class="ajax-link" href="parking_income.html"><span> 停车费用</span></a></li>
+                        <li><a class="ajax-link" href="maintenance_costs.html"><span> 维修设备费用</span></a></li>
+                        <li><a class="ajax-link" href="statement.html"><span> 财务报表</span></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+        <!-- left menu ends -->
+
+        <noscript>
+            <div class="alert alert-block col-md-12">
+                <h4 class="alert-heading">Warning!</h4>
+
+                <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+                    enabled to use this site.</p>
+            </div>
+        </noscript>
+
+        <div id="content" class="col-lg-10 col-sm-10">
+            <!-- content starts -->
+            <div>
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#">投诉管理</a>
+                    </li>
+                    <li>
+                        <a href="#">投诉信息</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="box col-md-12">
+                    <div class="box-inner">
+                        <div class="box-header well" data-original-title="" id="edit_room">
+                            <h2><i class="glyphicon glyphicon-edit"></i> 添加投诉信息</h2>
+                            <div class="box-icon">
+                                <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                        class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a href="#" class="btn btn-close btn-round btn-default"><i
+                                        class="glyphicon glyphicon-remove"></i></a>
+                            </div>
+                        </div>
+                        <div class="box-content">
+
+                                <div class=" form-group col-md-2">
+                                    <!--<label class="control-label" for="add_selectType">选择类别</label>-->
+                                    <select id="add_selectType" data-rel="chosen" class="btn-lg">
+                                        <option value="0">选择类别</option>
+
+                                        <option value="1"> 住 户 </option>
+                                        <option value="2"> 设 备 </option>
+                                        <option value="3"> 安 保 </option>
+                                        <option value="4"> 费 用 </option>
+                                        <option value="5"> 其 他 </option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-3" id="add_selectResident">
+                                    <!--<label class="control-label" for="add_selectResident">选择住户</label>-->
+                                    <!--<select  data-rel="chosen" class="btn-md" >-->
+                                        <!--&lt;!&ndash;<option value="0">选择住户</option>&ndash;&gt;-->
+
+                                    <!--</select>-->
+                                </div>
+
+                                <div class="form-group col-md-3">
+                                    <!--<label class="control-label" for="complain_content">内容</label>-->
+                                    <input type="text" class="form-control" id="complain_content" placeholder="投诉内容">
+                                </div>
+
+                                <!--<br>-->
+                                <div>
+                                    <label class="control-label" for="add_complain"> </label>
+                                    <button type="submit" class="btn btn-default" id="add_complain">提交</button>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="box col-md-12">
+                    <div class="box-inner">
+                        <div class="box-header well" data-original-title="">
+                            <h2><i class="glyphicon glyphicon-user"></i> 投诉信息汇总</h2>
+
+                            <div class="box-icon">
+                                <a href="#" class="btn btn-setting btn-round btn-default"><i
+                                        class="glyphicon glyphicon-cog"></i></a>
+                                <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                        class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a href="#" class="btn btn-close btn-round btn-default"><i
+                                        class="glyphicon glyphicon-remove"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="box-content">
+                            <table class="table table-striped table-bordered bootstrap-datatable responsive">
+                                <thead>
+                                <tr>
+                                    <th>投诉编号</th>
+                                    <th>投诉类别</th>
+                                    <th>投诉内容</th>
+                                    <th>所属小区</th>
+                                    <th>投诉人</th>
+                                    <th>投诉时间</th>
+                                    <th>处理进度</th>
+                                    <th>处理结果</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody id="complain_table">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+            <div class="row">
+                <div class="box col-md-12">
+                    <div class="box-inner">
+                        <div class="box-header well" data-original-title="">
+                            <h2><i class="glyphicon glyphicon-user"></i> 月度、季度汇总</h2>
+
+                            <div class="box-icon">
+                                <a href="#" class="btn btn-setting btn-round btn-default"><i
+                                        class="glyphicon glyphicon-cog"></i></a>
+                                <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                        class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a href="#" class="btn btn-close btn-round btn-default"><i
+                                        class="glyphicon glyphicon-remove"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="box-content">
+                            <div class="alert alert-info">
+                                <div class="controls">
+                                    <select id="selectYear" data-rel="chosen" class="btn-lg">
+                                        <option value="%">所有年份</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                    </select>
+
+                                    <select id="selectMonth" data-rel="chosen" class="btn-lg">
+                                        <option value="%">所有月份</option>
+                                        <option value="1">一月</option>
+                                        <option value="2">二月</option>
+                                        <option value="3">三月</option>
+                                        <option value="4">四月</option>
+                                        <option value="5">五月</option>
+                                        <option value="6">六月</option>
+                                        <option value="7">七月</option>
+                                        <option value="8">八月</option>
+                                        <option value="9">九月</option>
+                                        <option value="10">十月</option>
+                                        <option value="11">十一月</option>
+                                        <option value="12">十二月</option>
+                                    </select>
+
+                                    <select id="selectSeason" data-rel="chosen" class="btn-lg">
+                                        <option value="%">所有季度</option>
+                                        <option value="1">一季度</option>
+                                        <option value="2">二季度</option>
+                                        <option value="3">三季度</option>
+                                        <option value="4">四季度</option>
+                                    </select>
+
+
+                                    <label class="radio-inline">
+                                        <input type="radio" name="query_type" value="season" checked="checked"> 按季度
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="query_type" value="month"> 按月份
+                                    </label>
+
+                                    <button class="btn btn-default" id="query_total"> 查看</button>
+
+                                </div>
+                            </div>
+                            <table class="table table-striped table-bordered bootstrap-datatable responsive">
+                                <tr>
+                                    <td>
+                                        <table class="table table-striped table-bordered bootstrap-datatable responsive">
+                                            <thead>
+                                            <tr>
+                                                <th>小区</th>
+                                                <th>单元号</th>
+                                                <th>楼号</th>
+                                                <th>房间号</th>
+                                                <th>户主</th>
+                                                <th>投诉条数</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="complain_checkin_table">
+
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="table table-striped table-bordered bootstrap-datatable responsive">
+                                            <thead>
+                                            <tr>
+                                                <th>投诉类型</th>
+                                                <th>投诉条数</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="complain_type_table">
+
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+            <div class="row">
+                <div class="box col-md-12">
+                    <div class="box-inner">
+                        <div class="box-header well" data-original-title="">
+                            <h2><i class="glyphicon glyphicon-user"></i> 投诉意见按时间分布表</h2>
+
+                            <div class="box-icon">
+                                <a href="#" class="btn btn-setting btn-round btn-default"><i
+                                        class="glyphicon glyphicon-cog"></i></a>
+                                <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                        class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a href="#" class="btn btn-close btn-round btn-default"><i
+                                        class="glyphicon glyphicon-remove"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="box-content">
+                            <table class="table table-striped table-bordered bootstrap-datatable responsive">
+                                <thead>
+                                <tr>
+                                    <th>年份</th>
+                                    <th>月份</th>
+                                    <th>投诉条数</th>
+                                </tr>
+                                </thead>
+                                <tbody id="complain_time_table">
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <!--/span-->
+            </div>
+
+        </div><!--/.fluid-container-->
+
+        <footer class="row">
+            <p class="col-md-9 col-sm-9 col-xs-12 copyright">&copy; <a target="_blank">Yzbrlan & Diane</a> 2019 Database
+            </p>
+
+            <p class="col-md-3 col-sm-3 col-xs-12 powered-by">Powered by: <a>Wu & Du</a></p>
+        </footer>
+
+    </div>
+</div>
+
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- library for cookie management -->
+<script src="js/jquery.cookie.js"></script>
+<!-- calender plugin -->
+<script src='bower_components/moment/min/moment.min.js'></script>
+<script src='bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
+<!-- data table plugin -->
+<script src='js/jquery.dataTables.min.js'></script>
+
+<!-- select or dropdown enhancer -->
+<script src="bower_components/chosen/chosen.jquery.min.js"></script>
+<!-- plugin for gallery image view -->
+<script src="bower_components/colorbox/jquery.colorbox-min.js"></script>
+<!-- notification plugin -->
+<script src="js/jquery.noty.js"></script>
+<!-- library for making tables responsive -->
+<script src="bower_components/responsive-tables/responsive-tables.js"></script>
+<!-- tour plugin -->
+<script src="bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+<!-- star rating plugin -->
+<script src="js/jquery.raty.min.js"></script>
+<!-- for iOS style toggle switch -->
+<script src="js/jquery.iphone.toggle.js"></script>
+<!-- autogrowing textarea plugin -->
+<script src="js/jquery.autogrow-textarea.js"></script>
+<!-- multiple file upload plugin -->
+<script src="js/jquery.uploadify-3.1.min.js"></script>
+<!-- history.js for cross-browser state change on ajax -->
+<script src="js/jquery.history.js"></script>
+<!-- application script for Charisma demo -->
+<script src="js/charisma.js"></script>
+<script src="js/room.js"></script>
+
+</body>
+</html>
